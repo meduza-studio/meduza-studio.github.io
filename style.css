@@ -39,7 +39,7 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     padding: 20px;
-    max-width: 1600px;
+    max-width: 1500px;
     margin: 0 auto;
     transition: var(--transition);
     cursor: default;
