@@ -6,16 +6,32 @@
     <title>Meduza Studio</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_animation.css">
 
     <script src="LiteMark.js"></script>
 </head>
 
 <body>
-    <text type="markdown">
+    <noscript>
+        <div class="center">
+            <h1>JavaScript required.</h1>
+            <p>Enable JS in settings or change your browser.</p>
+        </div>
+    </noscript>
+    <text type="markdown" class="hidden">
+![](logo.jpg)
+# Meduza Studio
+> Профессиональная студия дизайна. Принимаем заказы по всему РФ и СНГ
 
-# Добро пожаловать на мой сайтец!
-> Я - Дима Зубко!
+### 🪄 Что мы умеем?
+Мы — **профессионалы** своего дела
     </text>
+
+    <script>
+        document.querySelectorAll(".hidden").forEach(element => {
+            element.style.display = "inline";
+        });
+    </script>
 </body>
 
 </html>
