@@ -243,7 +243,7 @@
         ];
 
         const isBlock = line => {
-            const tagMatch = line.match(/^<\/?(\w+)/i);
+            const tagMatch = line.match(/^<\/?([^\s/>]+)/i);
             if (!tagMatch) return false;
             const tagName = tagMatch[1].toLowerCase();
             return blockTags.includes(tagName);
@@ -253,7 +253,6 @@
             if (paragraph.length) result.push('<p>' + paragraph.join(' ') + '</p>');
             paragraph.length = 0;
         };
-
 
         for (let line of lines) {
             const trimmed = line.trim();
