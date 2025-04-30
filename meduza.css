@@ -168,13 +168,14 @@ header {
     transition: var(--transition);
     box-shadow: var(--box-shadow);
     overflow: hidden;
-    min-height: 250px; /* Фиксированная высота */
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    color: white; /* Белый текст для лучшей читаемости */
+    color: white;
 }
-/* Псевдоэлемент для фонового изображения */
+
+/* Фоновое изображение */
 .service-card::before {
     content: '';
     position: absolute;
@@ -189,50 +190,30 @@ header {
     transition: transform 0.5s ease;
 }
 
-/* Затемнение фона для лучшей читаемости текста */
-.service-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
 
-/* Динамическая подстановка фона через JS */
-.service-card[data-bg-image]::before {
-    background-image: attr(data-bg-image);
+
+/* Анимации */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
-/* Эффекты при наведении */
 
 .service-card:hover::before {
     transform: scale(1.1);
 }
-    /* Стили для контента внутри карточки */
+
+/* Текст */
 .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 .service-card p {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     opacity: 0.9;
 }
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
 /* Контакты */
 .contacts {
     padding: 4rem 0;
@@ -307,6 +288,44 @@ header {
 }
 
 .portfolio-info h3 {
+    margin-bottom: 0.5rem;
+}
+/* ОБРАЗОВАНИЕ */
+.education {
+    padding: 4rem 0;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.education-item {
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.education-img {
+    height: 250px;
+    background: #ddd;
+    background-size: cover;
+    background-position: center;
+}
+
+.education-info {
+    padding: 1.5rem;
+}
+
+.education-info h3 {
     margin-bottom: 0.5rem;
 }
 
