@@ -1,60 +1,136 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Meduza Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meduza Studio - Профессиональная студия дизайна</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="meduza.css">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style_animation.css">
-
-    <script src="LiteMark.js"></script>
-    <style>
-
-    </style>
 </head>
-
 <body>
-
-    <noscript>
-        <div class="center"> 
-            <h1>JavaScript required.</h1>
-            <p>Enable JS in settings or change your browser.</p>
+    <!-- Навигация -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="logoMEDUZA.png" alt="Meduza Studio Logo">
+                    <span class="logo-text">Meduza Studio</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#services">Услуги</a>
+                    <a href="#portfolio">Портфолио</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+            </nav>
         </div>
-    </noscript>
+    </header>
 
-    <text type="markdown" class="hidden">
-![](logo.jpg)
-# Meduza Studio
-> Профессиональная студия дизайна. Принимаем заказы по всему миру
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <img src="logo.jpg" alt="Meduza Studio Logo">
+            <h1>Профессиональная студия дизайна</h1>
+            <p>Принимаем заказы по всему миру. Создаем уникальные решения для вашего бренда.</p>
+        </div>
+    </section>
 
-### 🪄 Что мы умеем?
-# 1 **Реклама** - Создание рекламных баннеров для наружной и внутренней рекламы
-# 2 **Айдентика** - Дизайн айдентики для вашего бренда
-# 3 **Соц._сети** - Оформление и ведение блога для вашего бренда
-# 4 **UX/UI** - Интернфейс дизайн
-# 5 **WEB Design** - фронтэнд для вашего сайта
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Что мы умеем?</h2>
+            <div class="services-grid">
+                <div class="services-grid">
+                    <div class="service-card" data-bg-image="url('img/1.jpg')">
+                        <h3>Реклама</h3>
+                        <p>Создание рекламных баннеров</p>
+                    </div>
+                <div class="service-card">
+                    <h3>Айдентика</h3>
+                    <p>Дизайн айдентики для вашего бренда</p>
+                </div>
+                <div class="service-card">
+                    <h3>Соц. сети</h3>
+                    <p>Оформление и ведение блога для вашего бренда</p>
+                </div>
+                <div class="service-card">
+                    <h3>UX/UI</h3>
+                    <p>Интерфейс дизайн</p>
+                </div>
+                <div class="service-card">
+                    <h3>WEB Design</h3>
+                    <p>Фронтэнд для вашего сайта</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Мы в соц. сетях</h2>
+            <div class="social-buttons">
+                <a href="https://vk.com/meduza_studio" target="_blank" class="social-btn">
+                    <i class="fab fa-vk"></i>
+                    ВКонтакте
+                </a>
+                <a href="https://www.behance.net/c13b122d" target="_blank" class="social-btn">
+                    <i class="fab fa-behance"></i>
+                    Behance
+                </a>
+                <a href="https://www.tenchat.ru/Dmitriyzubko?utm_source=6c6e24bf-fe82-42e3-bbae-1f9ae8babcaf" target="_blank" class="social-btn">
+                    <i class="fas fa-comments"></i>
+                    TenChat
+                </a>
+                <a href="SkyKitchen.html" class="social-btn">
+                    <i class="fas fa-utensils"></i>
+                    SkyKitchen
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Портфолио -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Наши работы</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-img" style="background-image: url('Frame 11.jpg')"></div>
+                    <div class="portfolio-info">
+                        <h3>SkyKitchen</h3>
+                        <p>Веб-меню для кухни кальян-бара SkyLine в Г. Волгодонске</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img" style="background-image: url('https://via.placeholder.com/600x400')"></div>
+                    <div class="portfolio-info">
+                        <h3>Проект 2</h3>
+                        <p>Краткое описание проекта</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img" style="background-image: url('https://via.placeholder.com/600x400')"></div>
+                    <div class="portfolio-info">
+                        <h3>Проект 3</h3>
+                        <p>Краткое описание проекта</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-### 🌐 Мы в соц. сетях
-    </text>
-
-    <button onclick="window.open('https\:\/\/vk.com/meduza_studio', '_blank');">ВКонтакте</button>
-    <button onclick="window.open('https\:\/\/www.behance.net/c13b122d', '_blank');">Behance</button>
-    <button onclick="window.open('https\:\/\/www.tenchat.ru/Dmitriyzubko?utm_source=6c6e24bf-fe82-42e3-bbae-1f9ae8babcaf', '_blank');">TenChat</button>
-    <button onclick="window.location.href='index2.htm'">Перейти на страницу 2</button>
-    <button onclick="window.location.href='SkyKitchen.html'">SkyKitchen</button>
-
-
-    <script>
-        document.querySelectorAll(".hidden").forEach(element => {
-            element.style.display = "inline";
-        });
-    </script>
-
-
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <img src="logoMEDUZA.png" alt="Meduza Studio Logo" style="height: 30px;">
+                    <span class="logo-text">Meduza Studio</span>
+                </div>
+                <p class="copyright">© 2025 Meduza Studio. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
