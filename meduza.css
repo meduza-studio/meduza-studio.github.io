@@ -33,7 +33,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Учитываем высоту хедера */
+}
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
 body {
     font-family: var(--font-sans);
     line-height: 1.6;
@@ -126,7 +135,36 @@ header {
 .hero {
     padding: 5rem 0;
     text-align: center;
-    background: linear-gradient(135deg, rgba(67, 97, 238, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 70% 30%, rgba(90, 35, 133, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at 30% 70%, rgba(42, 9, 68, 0.8) 0%, transparent 40%),
+        linear-gradient(135deg, #0f031a 0%, #2a0944 100%);
+    animation: GradientWave 10s ease infinite;
+    opacity: 0.9;
+}
+
+@keyframes GradientWave {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .hero h1 {
@@ -217,7 +255,62 @@ header {
 /* Контакты */
 .contacts {
     padding: 4rem 0;
-    background: linear-gradient(135deg, rgba(72, 149, 239, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #fff;
+}
+
+.contacts::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    right: -20%;
+    bottom: -20%;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 30% 50%, rgba(80, 20, 120, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at 70% 70%, rgba(186, 102, 255, 0.915) 0%, transparent 45%),
+        radial-gradient(circle at 20% 80%, rgba(3, 1, 5, 0.9) 0%, transparent 50%),
+        linear-gradient(135deg, 
+            rgba(60, 10, 100, 0.2) 0%, 
+            rgba(45, 5, 85, 0.3) 30%, 
+            rgba(30, 0, 60, 0.4) 60%, 
+            rgba(50, 15, 90, 0.3) 80%);
+    filter: blur(15px);
+    animation: softDrift 10s ease-in-out infinite both;
+    mix-blend-mode: soft-light;
+}
+
+.contacts::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: 
+        linear-gradient(145deg, 
+            rgba(30, 0, 50, 0.9) 0%, 
+            rgba(40, 5, 70, 0.7) 100%);
+    opacity: 0.9;
+}
+
+@keyframes softDrift {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(-5%, 3%) rotate(1deg);
+    }
+    50% {
+        transform: translate(2%, -4%) rotate(-1deg);
+    }
+    75% {
+        transform: translate(6%, 2%) rotate(0.5deg);
+    }
 }
 
 .social-buttons {
@@ -245,7 +338,7 @@ header {
 .social-btn:hover {
     transform: translateY(-3px);
     background: var(--primary-color);
-    color: white;
+    color: rgb(65, 0, 194);
 }
 
 .social-btn i {
@@ -289,6 +382,43 @@ header {
 
 .portfolio-info h3 {
     margin-bottom: 0.5rem;
+}
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 2rem 0 3rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.8rem;
+    background: var(--light-bg);
+    border: none;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.filter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: rgb(111, 0, 255);
+    transform: translateY(-3px);
+}
+
+/* Для работы фильтрации */
+.portfolio-item {
+    display: block;
 }
 /* ОБРАЗОВАНИЕ */
 .education {

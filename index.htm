@@ -95,27 +95,28 @@
     <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="section-title">Портфолио</h2>
+             <!-- Фильтры -->
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">Все работы</button>
+            <button class="filter-btn" data-filter="web">Веб-сайты</button>
+            <button class="filter-btn" data-filter="app">Приложения</button>
+            <button class="filter-btn" data-filter="design">Дизайн</button>
+        </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="web">
                     <div class="portfolio-img" style="background-image: url('Frame 11.jpg')"></div>
                     <div class="portfolio-info">
                         <h3>SkyKitchen</h3>
                         <p>Веб-меню для кухни кальян-бара SkyLine в Г. Волгодонске</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-img" style="background-image: url('https://via.placeholder.com/600x400')"></div>
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-img" style="background-image: url('mamba.png')"></div>
                     <div class="portfolio-info">
-                        <h3>Проект 2</h3>
+                        <h3>Black Mamba</h3>
                         <p>Скоро...</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-img" style="background-image: url('https://via.placeholder.com/600x400')"></div>
-                    <div class="portfolio-info">
-                        <h3>Проект 3</h3>
-                        <p>Скоро...</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -168,5 +169,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/filtr.js"></script>
 </body>
 </html>
