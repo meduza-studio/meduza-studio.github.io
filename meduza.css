@@ -60,6 +60,20 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+.avatar-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.avatar {
+    width: 150px; /* Средний размер */
+    height: 150px;
+    border-radius: 50%; /* Круглая аватарка */
+    object-fit: cover; /* Чтобы изображение заполняло круг */
+    border: 3px solid #ffffff; /* Белая рамка */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
 .hero-image {
     width: 100%;
     text-align: center; /* Центрируем картинку */
