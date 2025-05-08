@@ -45,6 +45,7 @@ html {
     }
 }
 body {
+    overflow-x: hidden; /* Скрывает горизонтальный скролл */
     font-family: var(--font-sans);
     line-height: 1.6;
     color: var(--text-color);
@@ -59,7 +60,33 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+.hero-image {
+    width: 100%;
+    text-align: center; /* Центрируем картинку */
+}
 
+.hero-desktop,
+.hero-mobile {
+    max-width: 100%; /* Фиксированная ширина (можно заменить на конкретный px) */
+    height: auto; /* Сохраняет пропорции */
+    display: block; /* Убирает лишние отступы */
+    margin: 0 auto; /* Центрирует картинку */
+}
+
+/* Скрываем мобильную картинку на десктопе */
+.hero-mobile {
+    display: none;
+}
+
+/* На мобильных (768px или меньше) показываем мобильную картинку */
+@media (max-width: 768px) {
+    .hero-desktop {
+        display: none;
+    }
+    .hero-mobile {
+        display: block;
+    }
+}
 /* Навигация - тёмный стиль с оранжевыми акцентами */
 header {
     background: rgba(10, 10, 10, 0.95);
@@ -184,32 +211,32 @@ nav {
     text-align: center;   /* Для inline-элементов внутри */
     position: relative; /* Чтобы стрелка позиционировалась относительно баннера */
 }
+/* Стрелка */
 .scroll-down-arrow {
     position: absolute;
-    bottom: 20px;      /* Отступ от нижнего края баннера */
-    left: 50%;         /* Центрирование по горизонтали */
-    transform: translateX(-50%);
+    bottom: 100px; /* Увеличил отступ для лучшей видимости */
+    left: 50%;
+    z-index: 10; /* Стрелка поверх картинки */
     width: 30px;
     height: 30px;
-    border: 2px solid white; /* Цвет стрелки */
+    border: 2px solid white;
     border-width: 0 2px 2px 0;
-    transform: rotate(45deg) translateX(-50%); /* Форма стрелки */
-    animation: bounce 2s infinite; /* Анимация */
+    transform: rotate(45deg) translateX(-50%);
+    animation: bounce 2s infinite;
     cursor: pointer;
     animation-delay: 3s;
-    
 }
 
-/* Анимация "прыжка" */
+/* Анимация (исправленная) */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-        transform: rotate(45deg) translateY(0) translateX(-50%);
+        transform: rotate(45deg) translateX(-20%) translateY(0);
     }
     40% {
-        transform: rotate(45deg) translateY(-20px) translateX(-50%);
+        transform: rotate(45deg) translateX(-50%) translateY(-20px);
     }
     60% {
-        transform: rotate(45deg) translateY(-10px) translateX(-50%);
+        transform: rotate(45deg) translateX(-50%) translateY(-10px);
     }
 }
 
