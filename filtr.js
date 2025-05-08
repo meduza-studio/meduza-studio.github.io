@@ -38,3 +38,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+        // Приоритеты для определения ссылки:
+        // 1. Индивидуальный data-link
+        // 2. Общий для категории
+        // 3. Дефолтная страница
+        const link = item.dataset.link || 
+                   getCategoryLink(item.dataset.category) || 
+                   'default-projects.html';
+        
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', () => {
+            window.location.href = link;
+            // или window.open(link, '_blank'); для новой вкладки
+        });
+    });
+
+    function getCategoryLink(category) {
+        const links = {
+            'web': 'web-projects.html',
+            'mobile': 'mobile-projects.html',
+            'design': 'design-projects.html'
+        };
+        return links[category];
+    }
+});
