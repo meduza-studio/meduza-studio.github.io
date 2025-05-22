@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meduza Studio - Профессиональная студия дизайна</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="meduza.css">
-    <!-- Базовый favicon (поддерживается всеми браузерами) -->
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <!-- Для современных браузеров -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    
-    <!-- Для Apple устройств -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
-    <!-- Для Android -->
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
@@ -29,11 +23,12 @@
                     <span class="logo-text">Meduza Studio</span>
                 </a>
                 <div class="nav-links">
-                    <a href="#services">Services</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#contacts">Contacts</a>
-                    <a href="#About me">About me</a>
-                    <a href="#Certificates">My education</a>
+                    <a href="#services" data-i18n="services">Services</a>
+                    <a href="#portfolio" data-i18n="portfolio">Portfolio</a>
+                    <a href="#contacts" data-i18n="contacts">Contacts</a>
+                    <a href="#About me" data-i18n="about">About me</a>
+                    <a href="#Certificates" data-i18n="education">My education</a>
+                    <button id="language-toggle" class="language-btn">Русский</button>
                 </div>
             </nav>
         </div>
@@ -47,88 +42,80 @@
         </div>
         <div class="scroll-down-arrow"></div>
     </div>
-</div>
-    </div>
+
     <section class="hero" id="About me">
         <div class="container">
-            <h1>About Me</h1>
+            <h1 data-i18n="about_title">About Me</h1>
             <div class="avatar-container">
                 <img src="avatar.png" alt="Dmitry Zubko" class="avatar">
             </div>
-            <p>My name is Dmitry Zubko. I’m 19 years old and currently studying at the Moscow Institute of Physics and Technology (MEPhI). Alongside my university education, I’m expanding my skills in design through certifications from various schools, including Yudae School, Result University, and Yandex Practicum.
-
-                I specialize in web design, UX/UI, and graphic design, always striving to learn and improve my craft.</p>
-                <a href="#portfolio" class="cta-button">MY POTRFOLIO</a>
-                <a href="#contacts" class="cta-button">CLICK TO CONTACT ME</a>
+            <p data-i18n="about_text">My name is Dmitry Zubko. I'm 19 years old and currently studying at the Moscow Institute of Physics and Technology (MEPhI). Alongside my university education, I'm expanding my skills in design through certifications from various schools, including Yudae School, Result University, and Yandex Practicum. I specialize in web design, UX/UI, and graphic design, always striving to learn and improve my craft.</p>
+            <a href="#portfolio" class="cta-button" data-i18n="portfolio_btn">MY PORTFOLIO</a>
+            <a href="#contacts" class="cta-button" data-i18n="contact_btn">CLICK TO CONTACT ME</a>
         </div>
     </section>
    
-<!-- Услуги -->
-<section class="services" id="services">
-    <div class="container">
-        <br>
-        <br>
-        <h2 class="section-title">Range of jobs</h2>
-        <div class="services-grid">
-            <div class="service-card" style="--bg-image: url('img-services/1.jpg')">
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <br><br>
+            <h2 class="section-title" data-i18n="services_title">Range of jobs</h2>
+            <div class="services-grid">
+                <div class="service-card" style="--bg-image: url('img-services/1.jpg')">
+                    <p data-i18n="service1">Creating advertising banners</p>
+                </div>
+                <div class="service-card" style="--bg-image: url('img-services/2.jpg')">
+                    <p data-i18n="service2">Identity design for your brand</p>
+                </div>
+                <div class="service-card" style="--bg-image: url('img-services/3.jpg')">
+                    <p data-i18n="service3">Designing a blog for your brand</p>
+                </div>
+                <div class="service-card" style="--bg-image: url('img-services/4.jpg')">
+                    <p data-i18n="service4">Interface design</p>
+                </div>
+                <div class="service-card" style="--bg-image: url('img-services/5.jpg')">
+                    <p data-i18n="service5">The frontend for your website</p>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+    </section>
 
-                <p>Creating advertising banners</p>
-            </div>
-            <div class="service-card" style="--bg-image: url('img-services/2.jpg')">
-                
-                <p>Identity design for your brand</p>
-            </div>
-            <div class="service-card" style="--bg-image: url('img-services/3.jpg')">
-                
-                <p>Designing a blog for your brand</p>
-            </div>
-            <div class="service-card" style="--bg-image: url('img-services/4.jpg')">
-                
-                <p>Interface design</p>
-            </div>
-            <div class="service-card" style="--bg-image: url('img-services/5.jpg')">
-                
-                <p>The frontend for your website</p>
+    <div class="responsive-banner">
+        <img src="contact tag.jpg" alt="Баннер">
+    </div>
+
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+        <div class="contacts__decoration contacts__decoration--1"></div>
+        <div class="contacts__decoration contacts__decoration--2"></div>
+        
+        <div class="contacts__container">
+            <header class="contacts__header">
+                <h2 class="contacts__title" data-i18n="contacts_title">Me in social networks</h2>
+                <p class="contacts__subtitle" data-i18n="contacts_subtitle">Connect with me through these platforms</p>
+            </header>
+
+            <div class="contacts__social">
+                <a href="https://vk.com/meduza_studio" target="_blank" class="contacts__social-link">
+                    <i class="fab fa-vk contacts__social-icon"></i>
+                    <span data-i18n="vk">ВКонтакте</span>
+                </a>
+                <a href="https://www.behance.net/c13b122d" target="_blank" class="contacts__social-link">
+                    <i class="fab fa-behance contacts__social-icon"></i>
+                    <span data-i18n="behance">Behance</span>
+                </a>
+                <a href="https://www.tenchat.ru/Dmitriyzubko" target="_blank" class="contacts__social-link">
+                    <i class="fas fa-comments contacts__social-icon"></i>
+                    <span data-i18n="tenchat">TenChat</span>
+                </a>
+                <a href="https://t.me/AAAbyssal" target="_blank" class="contacts__social-link">
+                    <i class="fab fa-telegram contacts__social-icon"></i>
+                    <span data-i18n="telegram">Telegram</span>
+                </a>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-    </div>
-</section>
-<div class="responsive-banner">
-    <img src="contact tag.jpg" alt="Баннер">
-</div>
-<section class="contacts" id="contacts">
-    <div class="contacts__decoration contacts__decoration--1"></div>
-    <div class="contacts__decoration contacts__decoration--2"></div>
-    
-    <div class="contacts__container">
-        <header class="contacts__header">
-            <h2 class="contacts__title">Me in social networks</h2>
-            <p class="contacts__subtitle">Connect with me through these platforms</p>
-        </header>
-
-        <div class="contacts__social">
-            <a href="https://vk.com/meduza_studio" target="_blank" class="contacts__social-link">
-                <i class="fab fa-vk contacts__social-icon"></i>
-                ВКонтакте
-            </a>
-            <a href="https://www.behance.net/c13b122d" target="_blank" class="contacts__social-link">
-                <i class="fab fa-behance contacts__social-icon"></i>
-                Behance
-            </a>
-            <a href="https://www.tenchat.ru/Dmitriyzubko" target="_blank" class="contacts__social-link">
-                <i class="fas fa-comments contacts__social-icon"></i>
-                TenChat
-            </a>
-            <a href="https://t.me/AAAbyssal" target="_blank" class="contacts__social-link">
-                <i class="fab fa-telegram contacts__social-icon"></i>
-                Telegram
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Портфолио -->
     <div class="responsive-banner">
@@ -136,89 +123,73 @@
     </div>
     <section class="portfolio" id="portfolio">
         <div class="container">
-            <h2 class="section-title">Portfolio</h2>
-             <!-- Фильтры -->
-        <div class="portfolio-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web-sites</button>
-            <button class="filter-btn" data-filter="ad">Advertisement</button>
-            <button class="filter-btn" data-filter="design">Branding</button>
-        </div>
+            <h2 class="section-title" data-i18n="portfolio_title">Portfolio</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+                <button class="filter-btn" data-filter="web" data-i18n="filter_web">Web-sites</button>
+                <button class="filter-btn" data-filter="ad" data-i18n="filter_ad">Advertisement</button>
+                <button class="filter-btn" data-filter="design" data-i18n="filter_design">Branding</button>
+            </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web"data-project="skykitchen"
-                data-link="SkyKitchen.html"      
-                itemscope 
-                itemtype="http://schema.org/CreativeWork">
-                    
-                    <div class="portfolio-img" 
-                         style="background-image: url('Frame 11.jpg')"
-                         itemprop="image" 
-                         aria-label="SkyKitchen Project Preview"
-                         ></div>
-                   
+                <div class="portfolio-item" data-category="web" data-project="skykitchen" data-link="SkyKitchen.html" itemscope itemtype="http://schema.org/CreativeWork">
+                    <div class="portfolio-img" style="background-image: url('Frame 11.jpg')" itemprop="image" aria-label="SkyKitchen Project Preview"></div>
                     <div class="portfolio-info">
-                        <h3>SkyKitchen (for mobile viewing)</h3>
-                        <p>SkyLine Hookah bar's web menu in Volgodonsk</p>
+                        <h3 data-i18n="project1_title">SkyKitchen (for mobile viewing)</h3>
+                        <p data-i18n="project1_desc">SkyLine Hookah bar's web menu in Volgodonsk</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="design">
                     <div class="portfolio-img" style="background-image: url('mamba.png')"></div>
                     <div class="portfolio-info">
-                        <h3>Black Mamba</h3>
-                        <p>Design of a brand T-shirt for the Black Mamba club</p>
+                        <h3 data-i18n="project2_title">Black Mamba</h3>
+                        <p data-i18n="project2_desc">Design of a brand T-shirt for the Black Mamba club</p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="web" data-project="cryptowallet"
-                data-link="crypto.html"
-                itemscope 
-                itemtype="http://schema.org/CreativeWork">
-                    <div class="portfolio-img" style="background-image: url('landing.png')"
-                         itemprop="image" 
-                         aria-label="Crypto wallet app & landing Preview"></div>
-                    
-                         <div class="portfolio-info">
-                        <h3>Crypto wallet app & landing</h3>
-                        <p>Design of a landing page and a mobile application for a cryptocurrency wallet "Social wallet"</p>
+                <div class="portfolio-item" data-category="web" data-project="cryptowallet" data-link="crypto.html" itemscope itemtype="http://schema.org/CreativeWork">
+                    <div class="portfolio-img" style="background-image: url('landing.png')" itemprop="image" aria-label="Crypto wallet app & landing Preview"></div>
+                    <div class="portfolio-info">
+                        <h3 data-i18n="project3_title">Crypto wallet app & landing</h3>
+                        <p data-i18n="project3_desc">Design of a landing page and a mobile application for a cryptocurrency wallet "Social wallet"</p>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
     </section>
+
     <div class="responsive-banner">
         <img src="work tag.png" alt="Баннер">
     </div>
+
     <!-- Дипломы и сертификаты -->
     <section class="education" id="Certificates">
         <div class="container">
-            <h2 class="section-title">Diplomas and certificates</h2>
+            <h2 class="section-title" data-i18n="education_title">Diplomas and certificates</h2>
             <div class="education-grid">
                 <div class="education-item">
                     <div class="education-img" style="background-image: url('6.jpg')"></div>
                     <div class="education-info">
-                        <h3>Diploma from the Moscow University of the National Research Nuclear University "MEPhI"</h3>
+                        <h3 data-i18n="diploma1">Diploma from the Moscow University of the National Research Nuclear University "MEPhI"</h3>
                     </div>
                 </div>
                 <div class="education-item">
                     <div class="education-img" style="background-image: url('sertif.jpg')"></div>
                     <div class="education-info">
-                        <h3>Yudaev School Certificate</h3>
-                        <p>Certificate of completion of the UX/UI designer course</p>
+                        <h3 data-i18n="diploma2">Yudaev School Certificate</h3>
+                        <p data-i18n="diploma2_desc">Certificate of completion of the UX/UI designer course</p>
                     </div>
                 </div>
                 <div class="education-item">
                     <div class="education-img" style="background-image: url('https://via.placeholder.com/600x400')"></div>
                     <div class="education-info">
-                        <h3>Certificate 2</h3>
-                        <p>Soon...</p>
+                        <h3 data-i18n="diploma3">Certificate 2</h3>
+                        <p data-i18n="diploma3_desc">Soon...</p>
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
+            <br><br><br>
         </div>
     </section>
+
     <div class="responsive-banner">
         <img src="close tag.png" alt="Баннер">
     </div>
@@ -231,10 +202,12 @@
                     <img src="logoMEDUZA.png" alt="Meduza Studio Logo" style="height: 30px;">
                     <span class="logo-text">Meduza Studio</span>
                 </div>
-                <p class="copyright">© 2025 Meduza Studio. All rights reserved.</p>
+                <p class="copyright" data-i18n="copyright">© 2025 Meduza Studio. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
     <script src="filtr.js"></script>
+    <script src="translate.js"></script>
 </body>
 </html>

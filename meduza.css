@@ -674,6 +674,32 @@ nav {
 .service-link:hover i {
     transform: translateX(5px);
 }
+/* Стили для кнопки перевода */
+.language-btn {
+    padding: 8px 16px;
+    background: #FF5F25;
+    color: #fff;
+    border: 2px solid #000;
+    border-radius: 50px; /* Закругленные углы */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.language-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Для мобильной версии (адаптив) */
+@media (max-width: 768px) {
+    .language-btn {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
 
 /* Анимация появления */
 .service-card {
