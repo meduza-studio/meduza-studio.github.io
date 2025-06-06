@@ -18,29 +18,23 @@
 <body>
     <!-- Навигация -->
     <header>
-    <nav>
-        <a href="#" class="logo">
-            <img src="logo.png" alt="Logo">
-            <span>Meduza Studio</span>
-        </a>
-        
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="logoMEDUZA.png" alt="Meduza Studio Logo">
+                    <span class="logo-text">Meduza Studio</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#services" data-i18n="services">Services</a>
+                    <a href="#portfolio" data-i18n="portfolio">Portfolio</a>
+                    <a href="#contacts" data-i18n="contacts">Contacts</a>
+                    <a href="#About me" data-i18n="about">About me</a>
+                    <a href="#Certificates" data-i18n="education">My education</a>
+                    <button id="language-toggle" class="language-btn">Русский</button>
+                </div>
+            </nav>
         </div>
-        
-        <div class="nav-links" id="nav-links">
-            <!-- Ваши ссылки навигации -->
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contacts">Contacts</a>
-            <a href="#about">About me</a>
-            <a href="#education">My education</a>
-            <button class="language-btn">Русский</button>
-        </div>
-    </nav>
-</header>
+    </header>
 
     <!-- Герой секция -->
     <div class="hero-banner">
@@ -48,7 +42,7 @@
             <img src="wellcome tag.png" class="hero-desktop" alt="Добро пожаловать">
             <img src="mobile-image.png" class="hero-mobile" alt="Мобильная версия">
         </div>
-
+        
     </div>
 
     <section class="hero" id="About me">
@@ -216,5 +210,6 @@
     </footer>
 
     <script src="filtr.js"></script>
+    <script src="translate.js"></script>
 </body>
 </html>
