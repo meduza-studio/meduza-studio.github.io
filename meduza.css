@@ -110,16 +110,17 @@ header {
     top: 0;
     z-index: 1000;
     padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(255, 95, 37, 0.1); /* Обновленный цвет */
+    border-bottom: 1px solid rgba(255, 95, 37, 0.1); 
     transition: all 0.4s ease;
 }
 
 header.scrolled {
     padding: 0.5rem 0;
     background: rgba(5, 5, 5, 0.98);
-    box-shadow: 0 4px 25px rgba(255, 95, 37, 0.1); /* Обновленный цвет */
+    box-shadow: 0 4px 25px rgba(255, 95, 37, 0.1);
 }
 
+/* Контейнер для навигации */
 nav {
     display: flex;
     justify-content: space-between;
@@ -127,8 +128,10 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    position: relative;
 }
 
+/* Логотип (без изменений) */
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -137,12 +140,14 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    z-index: 1001;
 }
 
 .logo span {
-    color: #FF5F25; /* Новый акцентный цвет */
+    color: #FF5F25;
 }
 
+/* Навигационные ссылки - десктопная версия */
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -165,7 +170,7 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background: #FF5F25; /* Новый акцентный цвет */
+    background: #FF5F25;
     transition: width 0.3s ease;
 }
 
@@ -178,11 +183,83 @@ nav {
 }
 
 .nav-links a.active {
-    color: #FF5F25; /* Новый акцентный цвет */
+    color: #FF5F25;
 }
 
 .nav-links a.active::after {
     width: 100%;
+}
+
+/* Мобильное меню */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        transition: left 0.4s ease;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Анимация бургер-меню */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Адаптация отступов для мобильных */
+    nav {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        width: 80%;
+    }
 }
 
 .contact-btn {
@@ -225,21 +302,7 @@ nav {
     text-align: center;   /* Для inline-элементов внутри */
     position: relative; /* Чтобы стрелка позиционировалась относительно баннера */
 }
-/* Стрелка */
-.scroll-down-arrow {
-    position: absolute;
-    bottom: 100px; /* Увеличил отступ для лучшей видимости */
-    left: 50%;
-    z-index: 10; /* Стрелка поверх картинки */
-    width: 30px;
-    height: 30px;
-    border: 2px solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg) translateX(-50%);
-    animation: bounce 2s infinite;
-    cursor: pointer;
-    animation-delay: 3s;
-}
+
 
 /* Анимация (исправленная) */
 @keyframes bounce {

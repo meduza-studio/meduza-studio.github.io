@@ -199,3 +199,11 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleBtn.textContent = currentLang === 'en' ? 'Русский' : 'English';
   });
 });
+// Активация мобильного меню
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    
+    mobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
