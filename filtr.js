@@ -21,12 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-document.querySelector('.scroll-down-arrow').addEventListener('click', () => {
-    window.scrollBy({
-        top: window.innerHeight * 1, // Прокрутка на 100% высоты экрана
-        behavior: 'smooth'             // Плавная анимация
-    });
-});
+
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
     
